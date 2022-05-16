@@ -40,12 +40,10 @@ export default class ForEachIterator extends LightningElement {
             .then(result => {
                 console.table(result);
                 this.accountListServer = result;
-                console.log('UI LIST::>>'+this.accountListServer);
-                // this.error = undefined;
+                this.error = undefined;
             }).catch(result => {
                 console.table(result);
                 console.log('result');
-
                 this.error = result;
         })
     }

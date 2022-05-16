@@ -18,4 +18,26 @@
         {error}
     </lightning-card>
 </div>
+<div>
+    <lightning-card title="Accounts Name List (JS Object)">
+    <ul class="slds-has-dividers_around-space slds-var-p-around_medium">
+        <template iterator:acc={accountListObj}>
+            <li key={acc.value.id} class="slds-item"> {acc.value.name}</li>
+        </template>
+    </ul>
+</lightning-card>
+</div>
+<!--* With Using Iterator  -->
+<div>
+    <lightning-card title="Accounts Name List (Server Side)">
+        <ul class="slds-has-dividers_around-space slds-var-p-around_medium">
+            <template iterator:accserver={accountListServer} >
+            <li key={accserver.value.Id} class="slds-item">{accserver.value.Name}</li>
+            </template>
+        </ul>
+    </lightning-card>
+    <lightning-card>
+        {error}
+    </lightning-card>
+</div>
 </template>
