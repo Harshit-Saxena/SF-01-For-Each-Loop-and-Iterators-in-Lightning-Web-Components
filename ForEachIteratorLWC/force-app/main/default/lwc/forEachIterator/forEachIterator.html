@@ -1,0 +1,11 @@
+<template>
+<div style="width: 840px;">
+        <lightning-card title="Accounts Name List (JS Object)">
+        <ul class="slds-has-dividers_around-space slds-var-p-around_medium">
+            <template for:each={accountListObj} for:item="accJS">
+                <li key={accJS.id} class="slds-item"> {accJS.name}</li>
+            </template>
+        </ul>
+    </lightning-card>
+</div>
+</template>
