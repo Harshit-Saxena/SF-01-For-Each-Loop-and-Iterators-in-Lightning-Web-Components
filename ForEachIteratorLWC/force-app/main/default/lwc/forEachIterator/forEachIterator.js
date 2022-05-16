@@ -29,4 +29,25 @@ export default class ForEachIterator extends LightningElement {
             name: 'Joskhe Higashkhita'
             }
     ]
-}   
+    @track accountListServer = [];
+    @track error = '';
+    connectedCallback() {
+        this.getIteratorListJS();
+    }
+    getIteratorListJS() {
+        console.log('js running ');
+        getIteratorList()
+            .then(result => {
+                console.table(result);
+                this.accountListServer = result;
+                console.log('UI LIST::>>'+this.accountListServer);
+                // this.error = undefined;
+            }).catch(result => {
+                console.table(result);
+                console.log('result');
+
+                this.error = result;
+        })
+    }
+
+}
