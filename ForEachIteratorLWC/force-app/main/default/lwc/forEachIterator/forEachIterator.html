@@ -1,43 +1,43 @@
 <template>
-<div style="width: 840px;">
+    <div style="width: 840px;">
         <lightning-card title="Accounts Name List (JS Object)">
-        <ul class="slds-has-dividers_around-space slds-var-p-around_medium">
-            <template for:each={accountListObj} for:item="accJS">
-                <li key={accJS.id} class="slds-item"> {accJS.name}</li>
-            </template>
-        </ul>
-    </lightning-card>
-    <lightning-card title="Accounts Name List (Server Side)">
-        <ul class="slds-has-dividers_around-space slds-var-p-around_medium">
-            <template for:each={accountListServer} for:item="accServer">
-            <li key={accServer.Id} class="slds-item">{accServer.Name}</li>
-            </template>
-        </ul>
-    </lightning-card>
-    <lightning-card>
-        {error}
-    </lightning-card>
-</div>
-<div>
-    <!--* With Using Iterator  -->
-    <lightning-card title="Accounts Name List (JS Object)">
-    <ul class="slds-has-dividers_around-space slds-var-p-around_medium">
-        <template iterator:acc={accountListObj}>
-            <li key={acc.value.id} class="slds-item"> {acc.value.name}</li>
-        </template>
-    </ul>
-</lightning-card>
-</div>
-<div>
-    <lightning-card title="Accounts Name List (Server Side)">
-        <ul class="slds-has-dividers_around-space slds-var-p-around_medium">
-            <template iterator:accserver={accountListServer} >
-            <li key={accserver.value.Id} class="slds-item">{accserver.value.Name}</li>
-            </template>
-        </ul>
-    </lightning-card>
-    <lightning-card>
-        {error}
-    </lightning-card>
-</div>
+            <ul class="slds-has-dividers_around-space slds-var-p-around_medium">
+                <template for:each={accountListObj} for:item="accJS">
+                    <li key={accJS.id} class="slds-item"> {accJS.name}</li>
+                </template>
+            </ul>
+        </lightning-card>
+        <lightning-card title="Accounts Name List (Server Side)">
+            <ul class="slds-has-dividers_around-space slds-var-p-around_medium">
+                <template for:each={accountListServer} for:item="accServer">
+                    <li key={accServer.Id} class="slds-item">{accServer.Name}</li>
+                </template>
+            </ul>
+        </lightning-card>
+        <lightning-card>
+            {error}
+        </lightning-card>
+    </div>
+    <div>
+        <!--* With Using Iterator  -->
+        <lightning-card title="Accounts Name List (JS Object)">
+            <ul class="slds-has-dividers_around-space slds-var-p-around_medium">
+                <template iterator:acc={accountListObj}>
+                    <li key={acc.value.id} class="slds-item"> {acc.value.name}</li>
+                </template>
+            </ul>
+        </lightning-card>
+    </div>
+    <div>
+        <lightning-card title="Accounts Name List (Server Side)">
+            <ul class="slds-has-dividers_around-space slds-var-p-around_medium">
+                <template iterator:accserver={accountListServer}>
+                    <li key={accserver.value.Id} class="slds-item">{accserver.value.Name}</li>
+                </template>
+            </ul>
+        </lightning-card>
+        <lightning-card>
+            {error}
+        </lightning-card>
+    </div>
 </template>
